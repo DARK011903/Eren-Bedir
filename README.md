@@ -1,16 +1,37 @@
 # Eren-Bedir
-class Person:
-    def __init__(self, name, age, student_class):
-        self.name = name
-        self.age = age
-        self.student_class = student_class
+animals = [
+    {
+        "name": "Cat",
+        "group": "mammals",
+        "number_of_legs": 4,
+        "skills": ["jumping", "climbing"]
+    },
+    {
+        "name": "Dog",
+        "group": "mammals",
+        "number_of_legs": 4,
+        "skills": ["running", "smelling"]
+    },
+    {
+        "name": "Eagle",
+        "group": "birds",
+        "number_of_legs": 2,
+        "skills": ["flying", "hunting"]
+    },
+    {
+        "name": "Frog",
+        "group": "amphibians",
+        "number_of_legs": 4,
+        "skills": ["jumping", "swimming"]
+    },
+    {
+        "name": "Snake",
+        "group": "reptiles",
+        "number_of_legs": 0,
+        "skills": ["crawling", "hunting"]
+    }
+]
 
-    def greet(self):
-        print(f"Hello, my name is {self.name}, I am {self.age} years old.")
-        print(f"I am in class {self.student_class}.")
 
-
-eren_bedir = Person("Eren Bedir", 21, "01")
-
-
-eren_bedir.greet()
+for animal in animals:
+    print(f"{animal['name']} ({animal['group']}): {animal['number_of_legs']} legs - Skills: {', '.join(animal['skills'])}")
